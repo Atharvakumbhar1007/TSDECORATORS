@@ -1,0 +1,55 @@
+ORM (Object Relational Mapping)
+
+src >
+
+SQL → Every database server has its own variation (dialect) of SQL.
+
+Instead of writing SQL queries directly, we use an ORM (Object Relational Mapping).
+
+SQL is used for storing data in the database.
+
+We provide data to the ORM in the form of an object.
+
+
+Example:
+
+Person = {
+    name: "Amit",
+    age: 23,
+    gender: "M"
+}
+
+The ORM looks for the configured database provider, such as:
+
+MySQL
+
+PostgreSQL (PGSQL)
+
+SQL Server
+
+CockroachDB
+
+etc.
+
+
+The provider converts the object into the appropriate SQL query.
+
+
+Generated SQL Query:
+
+INSERT INTO persons (name, age, gender)
+VALUES ("Amit", 23, "M");
+
+Flow:
+
+Person Object
+      ↓
+      ORM
+      ↓
+Database Provider (MySQL / PostgreSQL / SQL Server / CockroachDB)
+      ↓
+SQL Query
+      ↓
+Database
+
+This is the same information as your notes, arranged in a clean and proper format.
