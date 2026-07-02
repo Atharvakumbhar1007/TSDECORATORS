@@ -10,7 +10,6 @@ SQL is used for storing data in the database.
 
 We provide data to the ORM in the form of an object.
 
-
 Example:
 
 Person = {
